@@ -27,7 +27,7 @@ LOGGER_ID = int(getenv("LOGGER_ID", None))
 SUPPORT_CHAT_ID = int(getenv("SUPPORT_CHAT_ID"))
 
 # Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 1711510822))
+OWNER_ID = int(getenv("OWNER_ID", 6485380150))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -37,7 +37,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/OfficialSangram/AvengerMusic",
+    "https://github.com/OfficialSangram/XavierMusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
@@ -84,7 +84,7 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/c281d14d16bca21077e8b.jpg"
+    "START_IMG_URL", "https://telegra.ph/file/8140f99138925e2741313.jpg"
 )
 PING_IMG_URL = getenv(
     "PING_IMG_URL", "https://telegra.ph/file/7fd3c67bca3f72ab70edd.jpg"
