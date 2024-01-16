@@ -1,12 +1,35 @@
 import pymongo
 import os
-from helpers.date import add_date
 DB_NAME = os.environ.get("DB_NAME", "")
 DB_URL = os.environ.get("DB_URL", "")
 mongo = pymongo.MongoClient(DB_URL)
 db = mongo[DB_NAME]
 dbcol = db["user"]
 premium_users_col = db["premium_users"]
+
+
+
+
+def add_date():
+    today = date.today()
+    ex_date = today + timedelta(days=30)
+    pattern = '%Y-%m-%d'
+    epcho = int(time.mktime(time.strptime(str(ex_date), pattern)))
+    normal_date = datetime.fromtimestamp(epcho).strftime('%Y-%m-%d')
+    return epcho, normal_date
+
+def check_expi(saved_date):
+    today = date.today()
+    pattern = '%Y-%m-%d'
+    epcho = int(time.mktime(time.strptime(str(today), pattern)))
+    then = saved_date - epcho
+    print(then)
+    if then > 0:
+        return True
+    else:
+        return False
+
+# ... (à¤à¤¨à¥à¤¯ à¤«à¤¼à¤à¤à¥à¤¶à¤¨à¥à¤ à¤à¤° à¤à¥à¤¡)
 
 # ... (other imports and functions)
 
